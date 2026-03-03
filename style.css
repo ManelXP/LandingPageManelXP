@@ -316,6 +316,10 @@ section {
     display: none;
 }
 
+.nav-links a.nav-cta:hover {
+    color: var(--color-white);
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
