@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a slot — Manel XP</title>
+    <meta name="description"
+        content="Book an appointment with Manel XP, AI & Data Consultant, to discuss your digital transformation project.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .reservation {
+            padding-top: calc(80px + var(--space-lg));
+            /* Support fixed header */
+            min-height: calc(100vh - 120px);
+            display: flex;
+            align-items: center;
+            background-color: var(--color-bg-light);
+        }
+
+        .reservation-container {
+            max-width: 1000px;
+        }
+
+        .calendar-wrapper {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            margin-top: var(--space-md);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .calendar-wrapper {
+                padding: 0;
+                border-radius: var(--radius-sm);
+            }
+
+            .reservation {
+                padding-top: calc(60px + var(--space-md));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Nav -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index-en.html" class="logo">MB.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index-en.html#services">Services</a></li>
+                    <li><a href="index-en.html#parcours">Journey</a></li>
+                    <li><a href="index-en.html#differenciation">Why Me</a></li>
+                    <li class="lang-switcher" style="margin-left: 1rem; font-weight: 600;">
+                        <a href="reservation.html">FR</a>
+                        <span style="color: var(--color-text-muted); margin: 0 4px;">|</span>
+                        <a href="reservation-en.html" style="color: var(--color-accent);">EN</a>
+                    </li>
+                    <li><a href="index-en.html#contact" class="btn btn-outline nav-cta">Contact Me</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile Nav Menu (hidden by default) -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="index-en.html#services">Services</a></li>
+                <li><a href="index-en.html#parcours">Journey</a></li>
+                <li><a href="index-en.html#differenciation">Why Me</a></li>
+                <li class="lang-switcher" style="font-weight: 600;">
+                    <a href="reservation.html">FR</a>
+                    <span style="color: var(--color-text-muted); margin: 0 4px;">|</span>
+                    <a href="reservation-en.html" style="color: var(--color-accent);">EN</a>
+                </li>
+                <li><a href="index-en.html#contact" class="btn btn-outline nav-cta">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Reservation Section -->
+        <section class="reservation fade-in-section">
+            <div class="container reservation-container">
+                <div class="section-header">
+                    <h2>Book a slot</h2>
+                    <p>Choose the time that suits you best to discuss your project.</p>
+                </div>
+
+                <div class="calendar-wrapper">
+                    <!-- Google Calendar Appointment Scheduling begin -->
+                    <iframe
+                        src="https://calendar.google.com/calendar/appointments/AcZssZ030s9oh7nvxVEUXfNDwLbxrm2WjEHAvtrwN00=?gv=true&hl=en"
+                        style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                    <!-- end Google Calendar Appointment Scheduling -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo">MB.</div>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Manel BENSAÏD. All rights reserved.
+            </p>
+            <div class="footer-links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
