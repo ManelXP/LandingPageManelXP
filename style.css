@@ -837,8 +837,9 @@ footer {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+    background: #0A66C2;
+    /* LinkedIn Blue */
     width: 40px;
     height: 40px;
     display: flex;
@@ -850,8 +851,10 @@ footer {
 
 .footer-links a:hover {
     color: var(--color-white);
-    background: var(--color-secondary);
+    background: #004182;
+    /* Darker LinkedIn Blue */
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(10, 102, 194, 0.4);
 }
 
 /* 
