@@ -272,14 +272,7 @@ section {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.75rem;
-    font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -1px;
-}
+.logo { display: none; }
 
 .nav-links {
     display: flex;
