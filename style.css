@@ -272,7 +272,14 @@ section {
     align-items: center;
 }
 
-.logo { display: none; }
+.logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
 
 .nav-links {
     display: flex;
@@ -841,7 +848,12 @@ footer {
     align-items: center;
 }
 
-.footer-logo { display: none; }
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    letter-spacing: -1px;
+}
 
 .footer-links a {
     color: var(--color-white);
