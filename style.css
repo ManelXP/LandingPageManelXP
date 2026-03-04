@@ -312,6 +312,25 @@ section {
     width: 100%;
 }
 
+
+.nav-social a {
+    color: #0A66C2;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.nav-social a::after {
+    display: none !important;
+}
+
+.nav-social a:hover {
+    color: #004182;
+    transform: translateY(-2px);
+}
+
 .nav-cta::after {
     display: none;
 }
