@@ -292,7 +292,8 @@ section {
     height: 96px;
     width: auto;
     vertical-align: middle;
-    border-radius: 50%;
+    border-radius: 8px;
+    /* Bords légèrement arrondis */
     transition: height var(--transition-fast);
 }
 
