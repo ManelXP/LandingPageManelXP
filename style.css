@@ -281,11 +281,18 @@ section {
     letter-spacing: -1px;
 }
 
-.header-logo-img,
+.header-logo-img {
+    height: 96px;
+    width: auto;
+    vertical-align: middle;
+    transition: height var(--transition-fast);
+}
+
 .footer-logo-img {
     height: 96px;
     width: auto;
     vertical-align: middle;
+    border-radius: 50%;
     transition: height var(--transition-fast);
 }
 
