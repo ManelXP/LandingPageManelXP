@@ -158,26 +158,64 @@
                             <h3>L'Art du Prompting (Niveau 1)</h3>
                             <p>Apprenez à donner les bonnes instructions à l'IA pour obtenir les meilleurs résultats à travers des règles d'or simples.</p>
 
-                            <!-- Formulaire de capture Brevo (Design natif) -->
-                            <div class="sib-form-container">
-                                <!-- Messages de statut Brevo -->
-                                <div id="error-message" style="display:none; font-size:14px; text-align:left; color:#ef4444; background-color:#fee2e2; padding: 10px; border-radius:4px; margin-bottom:10px;">
-                                    <span>Nous n'avons pas pu confirmer votre inscription.</span>
-                                </div>
-                                <div id="success-message" style="display:none; font-size:14px; text-align:left; color:#10b981; background-color:#d1fae5; padding: 10px; border-radius:4px; margin-bottom:10px;">
-                                    <span>Votre inscription est confirmée. Vérifiez vos emails !</span>
-                                </div>
-                                
-                                <form id="sib-form" method="POST" action="https://eb942627.sibforms.com/serve/MUIFAC2WiXyxCdCIHph0bywinkr11kolnnWuaR8H8wGl60lKaMxMXbfBOLaiCPQ78gLEgZo6MfFncmWF3QJoLy7jj1Wf0dRxHmmei3I-KsMhr3XVXcE8cVOMisYr05XkkODhzDlBNYMHzTZagWH_tXQ9dDnwZhOgqzB9rEPMCmM4TFO_ddjj6ibSwx0NFBhkYaKd_JTuVDKRxEzOOw==" data-type="subscription">
-                                    <input type="text" id="PRENOM" name="PRENOM" placeholder="Votre prénom" required class="form-input" style="margin-bottom: 0.5rem;" autocomplete="off">
-                                    <input type="email" id="EMAIL" name="EMAIL" placeholder="Votre adresse email" required data-required="true" class="form-input" style="margin-bottom: 0.5rem;" autocomplete="off">
+                            <!-- Formulaire de capture Brevo (Design strict pour JS natif) -->
+                            <div class="sib-form" style="text-align: center;">
+                                <div id="sib-form-container" class="sib-form-container">
+                                    <div id="error-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; color:#ef4444; background-color:#fee2e2; padding: 10px; border-radius:4px; margin-bottom:10px; display:none;">
+                                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                        <span class="sib-form-message-panel__inner-text">
+                                            Nous n'avons pas pu confirmer votre inscription.
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div id="success-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; color:#10b981; background-color:#d1fae5; padding: 10px; border-radius:4px; margin-bottom:10px; display:none;">
+                                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                                        <span class="sib-form-message-panel__inner-text">
+                                            Votre inscription est confirmée. Vérifiez vos emails !
+                                        </span>
+                                      </div>
+                                    </div>
                                     
-                                    <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
-                                    <input type="hidden" name="locale" value="fr">
-                                    
-                                    <button type="submit" form="sib-form" class="btn btn-primary w-100 sib-form-block__button">Recevoir la fiche pratique</button>
-                                    <p class="form-disclaimer" style="margin-top: 0.5rem;">Pas de spam, c'est promis. Vous pouvez vous désinscrire à tout moment.</p>
-                                </form>
+                                    <div id="sib-container" class="sib-container--large sib-container--vertical">
+                                      <form id="sib-form" method="POST" action="https://eb942627.sibforms.com/serve/MUIFAC2WiXyxCdCIHph0bywinkr11kolnnWuaR8H8wGl60lKaMxMXbfBOLaiCPQ78gLEgZo6MfFncmWF3QJoLy7jj1Wf0dRxHmmei3I-KsMhr3XVXcE8cVOMisYr05XkkODhzDlBNYMHzTZagWH_tXQ9dDnwZhOgqzB9rEPMCmM4TFO_ddjj6ibSwx0NFBhkYaKd_JTuVDKRxEzOOw==" data-type="subscription">
+                                        
+                                        <div class="sib-input sib-form-block">
+                                            <div class="form__entry entry_block">
+                                              <div class="form__label-row ">
+                                                <div class="entry__field">
+                                                    <input class="input form-input" maxlength="200" type="text" id="PRENOM" name="PRENOM" autocomplete="off" placeholder="Votre prénom" style="margin-bottom: 0.5rem;" />
+                                                </div>
+                                              </div>
+                                              <label class="entry__error entry__error--primary" style="font-size:13px; text-align:left; color:#ef4444; margin-bottom: 0.5rem; display:none;"></label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="sib-input sib-form-block">
+                                            <div class="form__entry entry_block">
+                                              <div class="form__label-row ">
+                                                <div class="entry__field">
+                                                    <input class="input form-input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Votre adresse email" data-required="true" required style="margin-bottom: 0.5rem;" />
+                                                </div>
+                                              </div>
+                                              <label class="entry__error entry__error--primary" style="font-size:13px; text-align:left; color:#ef4444; margin-bottom: 0.5rem; display:none;"></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="sib-form-block" style="text-align: left">
+                                            <button class="sib-form-block__button sib-form-block__button-with-loader btn btn-primary w-100" form="sib-form" type="submit">
+                                              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:16px; height:16px; fill:currentColor; margin-right:8px; display:none;">
+                                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                                              </svg>
+                                              <span class="sib-form-block__button-text">Recevoir la fiche pratique</span>
+                                            </button>
+                                        </div>
+
+                                        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
+                                        <input type="hidden" name="locale" value="fr">
+                                      </form>
+                                      <p class="form-disclaimer" style="margin-top: 0.5rem;">Pas de spam, c'est promis. Vous pouvez vous désinscrire à tout moment.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
