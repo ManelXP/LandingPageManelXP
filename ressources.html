@@ -170,7 +170,7 @@
                                 
                                 <form id="sib-form" method="POST" action="https://eb942627.sibforms.com/serve/MUIFAC2WiXyxCdCIHph0bywinkr11kolnnWuaR8H8wGl60lKaMxMXbfBOLaiCPQ78gLEgZo6MfFncmWF3QJoLy7jj1Wf0dRxHmmei3I-KsMhr3XVXcE8cVOMisYr05XkkODhzDlBNYMHzTZagWH_tXQ9dDnwZhOgqzB9rEPMCmM4TFO_ddjj6ibSwx0NFBhkYaKd_JTuVDKRxEzOOw==" data-type="subscription">
                                     <input type="text" id="PRENOM" name="PRENOM" placeholder="Votre prénom" required class="form-input" style="margin-bottom: 0.5rem;" autocomplete="off">
-                                    <input type="email" id="EMAIL" name="EMAIL" placeholder="Votre adresse email" required data-required="true" class="form-input" autocomplete="off">
+                                    <input type="email" id="EMAIL" name="EMAIL" placeholder="Votre adresse email" required data-required="true" class="form-input" style="margin-bottom: 0.5rem;" autocomplete="off">
                                     
                                     <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
                                     <input type="hidden" name="locale" value="fr">
@@ -212,44 +212,41 @@
     <!-- Custom Script -->
     <script src="script.js"></script>
 
-    <!-- Script pour la gestion du formulaire (optionnel sans rechargement) -->
+    <!-- Script pour la gestion de l'ancien formulaire Make (Conservé uniquement pour la carte 1) -->
     <script>
-        // Ce script permet d'envoyer le formulaire sans quitter la page (AJAX)
-        // Utile avec un Webhook Make pour afficher un message de succès
-        document.querySelectorAll('.lead-magnet-form').forEach(form => {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn.textContent;
-
-                // Si vous n'avez pas encore configuré le webhook, ce code fonctionnera
-                // quand le webhook retournera une réponse 200 OK.
-                try {
-                    btn.textContent = 'Envoi en cours...';
-                    btn.disabled = true;
-
-                    const formData = new FormData(form);
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    if (response.ok) {
-                        form.innerHTML = '<div class="success-message" style="text-align:center; padding: 1rem; color: #10b981;"><i data-lucide="check-circle" style="width:32px; height:32px; margin-bottom: 0.5rem; display:inline-block;"></i><p>Merci ! Vérifiez votre boîte mail.</p></div>';
-                        lucide.createIcons();
-                    } else {
-                        // Le webhook Make peut retourner des CORS ou d'autres erreurs s'il n'est pas bien paramétré.
-                        // Pour l'instant, on simule le succès si le webhook n'existe pas encore.
-                        alert('Si un webhook Make était configuré, cela aurait fonctionné. Pensez à remplacer YOUR_WEBHOOK_URL dans le code HTML.');
+        document.addEventListener('DOMContentLoaded', () => {
+            const makeForms = document.querySelectorAll('.lead-magnet-form');
+            makeForms.forEach(form => {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const btn = form.querySelector('button[type="submit"]');
+                    const originalText = btn.textContent;
+    
+                    try {
+                        btn.textContent = 'Envoi en cours...';
+                        btn.disabled = true;
+    
+                        const formData = new FormData(form);
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData
+                        });
+    
+                        if (response.ok) {
+                            form.innerHTML = '<div class="success-message" style="text-align:center; padding: 1rem; color: #10b981;"><i data-lucide="check-circle" style="width:32px; height:32px; margin-bottom: 0.5rem; display:inline-block;"></i><p>Merci ! Vérifiez votre boîte mail.</p></div>';
+                            lucide.createIcons();
+                        } else {
+                            alert('Si un webhook Make était configuré, cela aurait fonctionné. Pensez à remplacer YOUR_WEBHOOK_URL dans le code HTML.');
+                            btn.textContent = originalText;
+                            btn.disabled = false;
+                        }
+                    } catch (err) {
+                        console.error('Erreur:', err);
+                        alert('Une erreur est survenue (ou le webhook est non configuré).');
                         btn.textContent = originalText;
                         btn.disabled = false;
                     }
-                } catch (err) {
-                    console.error('Erreur:', err);
-                    alert('Une erreur est survenue (ou le webhook est non configuré).');
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                }
+                });
             });
         });
     </script>
