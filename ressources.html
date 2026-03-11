@@ -127,7 +127,7 @@
                                 <i data-lucide="bot" style="width: 48px; height: 48px;"></i>
                             </div>
                         </div>
-                        <div class="resource-body">
+                        <div class="resource-body" style="display: flex; flex-direction: column;">
                             <span class="resource-tag">Fiche Pratique</span>
                             <h3>L'Art du Prompting (Niveau Débutant)</h3>
                             <p>Apprenez à donner les bonnes instructions à l'IA pour obtenir les meilleurs résultats à travers des règles d'or simples.</p>
@@ -141,7 +141,7 @@
                               .entry__error { display: none; }
                               .entry__error--active { display: block; animation: fadeIn 0.3s ease-in-out; }
                             </style>
-                            <div class="sib-form" style="text-align: center;">
+                            <div class="sib-form" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
                                 <div id="sib-form-container" class="sib-form-container">
                                     <div id="error-message" class="sib-form-message-panel" style="font-size:14px; text-align:left; color:#ef4444; background-color:#fee2e2; padding: 10px; border-radius:4px; margin-bottom:10px;">
                                       <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
@@ -206,54 +206,70 @@
                     <!-- Lead Magnet Card 2 (Prompting Intermédiaire) -->
                     <div class="resource-card">
                         <div class="resource-image">
-                            <!-- Placeholder pour l'image de la ressource -->
                             <div
-                                style="width: 100%; height: 200px; background: linear-gradient(135deg, #0f172a, #3b82f6); display: flex; align-items: center; justify-content: center; color: white;">
-                                <i data-lucide="brain-circuit" style="width: 48px; height: 48px;"></i>
+                                style="width: 100%; height: 200px; background: linear-gradient(135deg, #1e293b, #3b82f6); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="bot" style="width: 48px; height: 48px;"></i>
                             </div>
                         </div>
-                        <div class="resource-body">
+                        <div class="resource-body" style="display: flex; flex-direction: column;">
                             <span class="resource-tag">Fiche Pratique</span>
                             <h3>L'Art du Prompting (Niveau Intermédiaire)</h3>
                             <p>Passez au niveau supérieur avec des cas d'usage complexes et les principes fondamentaux de la structuration de prompts efficaces.</p>
 
-                            <!-- Formulaire de capture (Placeholder Make pour l'instant) -->
-                            <form class="lead-magnet-form" action="https://hook.eu1.make.com/YOUR_WEBHOOK_URL"
-                                method="POST">
-                                <input type="hidden" name="resource" value="Prompting_Intermediaire">
-                                <input type="email" name="email" placeholder="Votre adresse email" required
-                                    class="form-input">
-                                <button type="submit" class="btn btn-primary w-100">Bientôt disponible</button>
-                                <p class="form-disclaimer">Pas de spam, c'est promis. Vous pouvez vous désinscrire à
-                                    tout moment.</p>
-                            </form>
+                            <!-- Formulaire de capture simulé (bientôt dispo) -->
+                            <div class="sib-form" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                                <div class="sib-form-container" style="padding: 0;">
+                                    <div class="sib-container--large sib-container--vertical" style="padding: 0;">
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="text" placeholder="Votre prénom" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="email" placeholder="Votre adresse email" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-form-block" style="text-align: left; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                                            <button class="btn btn-primary w-100" type="button" disabled style="opacity: 0.8; cursor: not-allowed; background-color: #64748b; border-color: #64748b;">
+                                              <span class="sib-form-block__button-text">Bientôt disponible</span>
+                                            </button>
+                                        </div>
+                                        <p class="form-disclaimer" style="margin-top: 0.5rem;">Pas de spam, c'est promis. Vous pouvez vous désinscrire à tout moment.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Lead Magnet Card 3 (Prompting Avancé) -->
                     <div class="resource-card">
                         <div class="resource-image">
-                            <!-- Placeholder pour l'image de la ressource -->
                             <div
-                                style="width: 100%; height: 200px; background: linear-gradient(135deg, #020617, #8b5cf6); display: flex; align-items: center; justify-content: center; color: white;">
-                                <i data-lucide="cpu" style="width: 48px; height: 48px;"></i>
+                                style="width: 100%; height: 200px; background: linear-gradient(135deg, #1e293b, #8b5cf6); display: flex; align-items: center; justify-content: center; color: white;">
+                                <i data-lucide="bot" style="width: 48px; height: 48px;"></i>
                             </div>
                         </div>
-                        <div class="resource-body">
+                        <div class="resource-body" style="display: flex; flex-direction: column;">
                             <span class="resource-tag">Fiche Pratique</span>
                             <h3>L'Art du Prompting (Niveau Avancé)</h3>
-                            <p>Maîtrisez les techniques de prompt-engineering les plus pointues : Few-Shot, Chain-of-Thought et conception d'agents autonomes.</p>
+                            <p>Maîtrisez les techniques de prompt engineering les plus pointues : Few-Shot, Chain-of-Thought et conception d'agents autonomes.</p>
 
-                            <!-- Formulaire de capture (Placeholder Make pour l'instant) -->
-                            <form class="lead-magnet-form" action="https://hook.eu1.make.com/YOUR_WEBHOOK_URL"
-                                method="POST">
-                                <input type="hidden" name="resource" value="Prompting_Avance">
-                                <input type="email" name="email" placeholder="Votre adresse email" required
-                                    class="form-input">
-                                <button type="submit" class="btn btn-primary w-100">Bientôt disponible</button>
-                                <p class="form-disclaimer">Pas de spam, c'est promis. Vous pouvez vous désinscrire à
-                                    tout moment.</p>
-                            </form>
+                            <!-- Formulaire de capture simulé (bientôt dispo) -->
+                            <div class="sib-form" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                                <div class="sib-form-container" style="padding: 0;">
+                                    <div class="sib-container--large sib-container--vertical" style="padding: 0;">
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="text" placeholder="Votre prénom" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="email" placeholder="Votre adresse email" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-form-block" style="text-align: left; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                                            <button class="btn btn-primary w-100" type="button" disabled style="opacity: 0.8; cursor: not-allowed; background-color: #64748b; border-color: #64748b;">
+                                              <span class="sib-form-block__button-text">Bientôt disponible</span>
+                                            </button>
+                                        </div>
+                                        <p class="form-disclaimer" style="margin-top: 0.5rem;">Pas de spam, c'est promis. Vous pouvez vous désinscrire à tout moment.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
