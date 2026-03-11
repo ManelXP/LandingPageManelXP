@@ -871,7 +871,23 @@ footer {
     letter-spacing: -1px;
 }
 
-.footer-links a {
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-link-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-link-text:hover {
+    color: var(--color-white);
+}
+
+.footer-social-link {
     color: var(--color-white);
     background: #0A66C2;
     /* LinkedIn Blue */
@@ -884,7 +900,7 @@ footer {
     transition: all var(--transition-fast);
 }
 
-.footer-links a:hover {
+.footer-social-link:hover {
     color: var(--color-white);
     background: #004182;
     /* Darker LinkedIn Blue */
