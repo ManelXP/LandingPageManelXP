@@ -111,7 +111,6 @@ section {
     padding: var(--space-xl) 0;
     position: relative;
     z-index: 2;
-    scroll-margin-top: 160px;
 }
 
 .bg-light {
@@ -301,13 +300,16 @@ section {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .nav-links a {
     font-weight: 500;
     color: var(--color-text-main);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-links a::after {

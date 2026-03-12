@@ -37,6 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 2b. Smooth scroll with navbar offset for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+            const extraPadding = 24; // extra breathing room in px
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - navbarHeight - extraPadding;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        });
+    });
+
     // 3. Fade-in animation on scroll using IntersectionObserver
     const fadeElements = document.querySelectorAll('.fade-in-section');
 
