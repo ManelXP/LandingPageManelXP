@@ -111,6 +111,7 @@ section {
     padding: var(--space-xl) 0;
     position: relative;
     z-index: 2;
+    scroll-margin-top: 120px;
 }
 
 .bg-light {
