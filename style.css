@@ -464,7 +464,7 @@ section {
 .hero-desc {
     font-size: 1.1rem;
     color: var(--color-text-muted);
-    margin-bottom: var(--space-lg);
+    margin-bottom: 2.5rem;
     max-width: 600px;
     font-weight: 400;
     line-height: 1.6;
