@@ -595,6 +595,34 @@ section {
     color: var(--color-text-muted);
     font-size: 1rem;
     line-height: 1.7;
+    flex: 1;
+}
+
+/* Clickable card styles */
+a.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card-link-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all var(--transition-fast);
+}
+
+a.service-card-link:hover .card-link-hint {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* 

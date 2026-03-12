@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratégie & Gouvernance de la Donnée — Manel XP</title>
+    <meta name="description" content="Structuration du Data Office, roadmap data & IA, gouvernance des données. Manel XP accompagne les organisations à faire de la donnée un actif réel.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stratégie & Gouvernance de la Donnée — Manel XP">
+    <meta property="og:description" content="Je construis la roadmap, organise la gouvernance et structure votre CDO Office pour que la donnée devienne un actif réel, pas un chantier permanent.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css?v=14">
+    <style>
+        /* ── Service Page Specific Styles ── */
+        .service-hero {
+            padding-top: 9rem;
+            padding-bottom: 4rem;
+            background: radial-gradient(circle at 10% 50%, rgba(46, 117, 182, 0.08), transparent 40%);
+            border-bottom: 1px solid rgba(46, 117, 182, 0.1);
+        }
+
+        .service-hero-inner {
+            max-width: 800px;
+        }
+
+        .service-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0.4rem 1rem;
+            background: rgba(46, 117, 182, 0.1);
+            border-radius: 50px;
+            border: 1px solid rgba(46, 117, 182, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .service-hero-tagline {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            line-height: 1.5;
+            max-width: 700px;
+            border-left: 4px solid var(--color-accent);
+            padding-left: 1.25rem;
+        }
+
+        /* ── Content Section ── */
+        .service-content {
+            padding: 4rem 0;
+        }
+
+        .service-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .service-body p {
+            font-size: 1.05rem;
+            color: var(--color-text-main);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-body h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 2.5rem 0 1.25rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text-main);
+        }
+
+        .service-list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            margin-top: 0.45rem;
+        }
+
+        /* ── Sidebar ── */
+        .service-sidebar {
+            position: sticky;
+            top: 7rem;
+        }
+
+        .sidebar-card {
+            background: rgba(255,255,255,0.9);
+            border: 1px solid rgba(46, 117, 182, 0.15);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-audience {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-cta-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-cta-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        /* ── CTA Banner ── */
+        .service-cta-banner {
+            background: var(--gradient-dark);
+            color: var(--color-white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .service-cta-banner h2 {
+            color: var(--color-white);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-cta-banner p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-inline: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 900px) {
+            .service-layout {
+                grid-template-columns: 1fr;
+            }
+            .service-sidebar {
+                position: static;
+            }
+            .service-hero-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Nav -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logofondblanc_MANELXP.svg" alt="Manel XP Logo" class="header-logo-img"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#parcours">Parcours</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="index.html#differenciation">Pourquoi moi</a></li>
+                    <li class="lang-switcher" style="margin-left: 1rem; font-weight: 600;">
+                        <a href="service-strategie.html" style="color: var(--color-accent);">FR</a>
+                        <span style="color: var(--color-text-muted); margin: 0 4px;">|</span>
+                        <a href="index-en.html">EN</a>
+                    </li>
+                    <li class="nav-social" style="display: flex; justify-content: center;">
+                        <a href="https://www.linkedin.com/in/manelxp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" style="width: 24px; height: 24px;"></i>
+                        </a>
+                    </li>
+                    <li><a href="reservation.html" class="btn btn-outline nav-cta">Me contacter</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile Nav -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#parcours">Parcours</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="index.html#differenciation">Pourquoi moi</a></li>
+                <li><a href="reservation.html" class="btn btn-outline nav-cta">Me contacter</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <a href="index.html#services" class="back-link">
+                    <i data-lucide="arrow-left" style="width:16px;height:16px;"></i>
+                    Retour aux services
+                </a>
+                <div class="service-hero-inner">
+                    <div class="service-badge">
+                        <i data-lucide="network" style="width:16px;height:16px;"></i>
+                        Stratégie Data
+                    </div>
+                    <h1 class="service-hero-title">Stratégie &amp; Gouvernance de la Donnée</h1>
+                    <p class="service-hero-tagline">Vos données existent. Mais sont-elles vraiment gouvernées, exploitables, et alignées à vos ambitions IA ?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="service-content">
+            <div class="container">
+                <div class="service-layout">
+
+                    <!-- Body -->
+                    <div class="service-body">
+                        <p>Beaucoup d'organisations accumulent des données sans avoir les structures pour en tirer parti. Pas de propriétaire clairement défini, pas de roadmap cohérente, des équipes qui travaillent en silos — et une transformation data qui avance moins vite que prévu.</p>
+
+                        <p>J'interviens pour construire ou renforcer les fondations : structuration du Data Office, définition de la roadmap data et IA, mise en place de la gouvernance, nomination et accompagnement des rôles clés (CDO, Data Owners, Data Managers, Data Stewards).</p>
+
+                        <p>J'ai mené ce type de chantier dans un environnement exigeant — secteur santé, groupe international, contraintes réglementaires fortes (RGPD, CNIL, HIPAA) — en coordonnant les équipes métier, IT, juridique et R&amp;D.</p>
+
+                        <p>Mon approche n'est pas purement théorique. Je traduis la stratégie en actions concrètes, en m'assurant que chaque décision est comprise et adoptée par les équipes — pas seulement validée en comité.</p>
+
+                        <h2>Ce que j'accompagne</h2>
+                        <ul class="service-list">
+                            <li>Structuration ou montée en puissance d'un Data Office</li>
+                            <li>Élaboration de la roadmap data &amp; IA</li>
+                            <li>Mise en place de la gouvernance des données</li>
+                            <li>Alignement des enjeux data avec le business, la R&amp;D et le juridique</li>
+                            <li>Conseil sur les enjeux data dans les contrats fournisseurs et partenaires (DPA, DTA) en interface avec les équipes juridiques</li>
+                            <li>Coordination avec les équipes techniques sur les Core Data Models</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="service-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Pour qui ?</h3>
+                            <p class="sidebar-audience">Directions générales, CDO, DSI et équipes data de moyennes et grandes organisations — en particulier dans les secteurs santé, recherche et industrie.</p>
+
+                            <div class="sidebar-cta-title">Vous avez un chantier data à structurer ?</div>
+                            <p class="sidebar-cta-desc">Parlons de votre contexte et de la meilleure façon d'avancer ensemble.</p>
+                            <a href="reservation.html" class="btn btn-primary btn-full">Parlons-en</a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="service-cta-banner">
+            <div class="container">
+                <h2>Vous avez un chantier data à structurer ?</h2>
+                <p>Que ce soit pour créer votre Data Office de zéro ou renforcer une gouvernance existante, je m'adapte à votre contexte.</p>
+                <a href="reservation.html" class="btn btn-primary">Réserver un échange</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-logo"><img src="logofondblanc_MANELXP.svg" alt="Manel XP Logo" class="footer-logo-img"></div>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Manel XP. Tous droits réservés.
+            </p>
+            <div class="footer-links">
+                <a href="mentions-legales.html" class="footer-link-text">Mentions Légales &amp; Confidentialité</a>
+                <a href="https://www.linkedin.com/in/manelxp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="script.js?v=7"></script>
+</body>
+</html>
