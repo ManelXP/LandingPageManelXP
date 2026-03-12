@@ -409,10 +409,10 @@ section {
 =========================================================
 */
 .hero {
-    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 15% 50%, rgba(46, 117, 182, 0.08), transparent 35%),
