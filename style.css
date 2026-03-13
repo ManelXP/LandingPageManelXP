@@ -391,7 +391,7 @@ section {
 .nav-dropdown {
     display: none;
     position: absolute;
-    top: calc(100% + 0.75rem);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.98);
@@ -402,7 +402,8 @@ section {
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
     min-width: 280px;
     padding: 0.5rem;
-    z-index: 9999;
+    z-index: 10000;
+    pointer-events: none; /* Désactivé par défaut */
 }
 
 .nav-dropdown::before {
@@ -418,6 +419,7 @@ section {
 
 .has-dropdown:hover .nav-dropdown {
     display: block;
+    pointer-events: auto; /* Activé au survol */
     animation: dropdownReveal 0.2s ease forwards;
 }
 
