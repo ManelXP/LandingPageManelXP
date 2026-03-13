@@ -505,7 +505,24 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    text-align: center;
+    text-align: left; /* Changed from center to accommodate sub-menus */
+    padding: 0 1rem;
+}
+
+.mobile-submenu {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid rgba(46, 117, 182, 0.1);
+}
+
+.mobile-submenu a {
+    font-size: 0.9rem !important;
+    color: var(--color-text-muted) !important;
+    font-weight: 500 !important;
 }
 
 /* 
