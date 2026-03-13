@@ -1340,6 +1340,10 @@ footer {
         width: 100%;
     }
 
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-container {
         flex-direction: column;
         gap: 1.5rem;
