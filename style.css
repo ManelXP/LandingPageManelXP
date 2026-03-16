@@ -827,6 +827,24 @@ a.service-card-link:hover .card-link-hint {
     margin-bottom: 0.75rem;
 }
 
+.timeline-content p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.timeline-reflection {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    border-left: 2px solid rgba(46, 117, 182, 0.2);
+    padding-left: 1rem;
+}
+
 /* 
 =========================================================
    Différenciation Section
