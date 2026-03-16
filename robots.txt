@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /mentions-legales.html
+Disallow: /legal-notice.html
 
 Sitemap: https://manelxp.com/sitemap.xml
