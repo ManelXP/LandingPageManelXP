@@ -832,6 +832,47 @@ a.service-card-link:hover .card-link-hint {
    Différenciation Section
 =========================================================
 */
+.why-me-narrative {
+    max-width: 850px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.why-me-intro {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.why-me-body {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.why-me-body p {
+    margin-bottom: 1.5rem;
+}
+
+.why-me-cta-box {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.why-me-cta-box h4 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
 .pillars-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
