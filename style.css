@@ -887,54 +887,6 @@ a.service-card-link:hover .card-link-hint {
     margin-bottom: 2rem;
 }
 
-.experience-spotlight {
-    background: var(--color-white);
-    border: 1px solid rgba(46, 117, 182, 0.1);
-    border-radius: var(--radius-md);
-    padding: 3rem;
-    margin: 2rem 0;
-    box-shadow: var(--shadow-md);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.experience-spotlight::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--gradient-primary);
-}
-
-.spotlight-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(46, 117, 182, 0.1);
-    color: var(--color-secondary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spotlight-content h4 {
-    color: var(--color-primary);
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-}
-
-.spotlight-content p {
-    margin-bottom: 0;
-    font-style: italic;
-    color: var(--color-text-muted);
-}
-
 .why-me-cta-box {
     margin-top: 10rem;
     padding: 6rem 2rem;
