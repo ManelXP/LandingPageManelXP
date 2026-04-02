@@ -28,12 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Navbar shrink & blur on scroll
     const navbar = document.querySelector('.navbar');
+    const announcementBar = document.querySelector('.announcement-bar');
+    const barHeight = announcementBar ? announcementBar.offsetHeight : 0;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > barHeight) {
             navbar.classList.add('scrolled');
+            navbar.style.top = '0';
         } else {
             navbar.classList.remove('scrolled');
+            navbar.style.top = `${barHeight - window.scrollY}px`;
         }
     });
 
