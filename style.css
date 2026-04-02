@@ -297,7 +297,7 @@ section {
     z-index: 1000;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     padding: 1.25rem 0;
-    transition: all var(--transition-normal);
+    transition: background-color var(--transition-normal), padding var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .navbar.scrolled {
