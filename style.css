@@ -275,12 +275,21 @@ section {
 .announcement-cta-text {
     margin-left: 1rem;
     background: rgba(255, 255, 255, 0.2);
-    padding: 0.2rem 0.8rem;
+    padding: 0.3rem 1rem;
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     backdrop-filter: blur(4px);
     transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.announcement-cta-text i {
+    width: 16px;
+    height: 16px;
 }
 
 .announcement-bar:hover .announcement-cta-text {
