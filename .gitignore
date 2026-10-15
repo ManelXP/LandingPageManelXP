@@ -4,3 +4,6 @@
 # Archives
 *.zip
 site_vitrine_manel*.zip
+
+# Anciennes versions du site, gardées en local, jamais publiées
+site_vitrine_manel*/
