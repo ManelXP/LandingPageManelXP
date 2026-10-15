@@ -162,17 +162,25 @@
                             <p>A ready-to-use list to automate your watch, write better emails, and structure your
                                 business ideas.</p>
 
-                            <!-- Lead Magnet Form -->
-                            <form class="lead-magnet-form" action="https://hook.eu1.make.com/YOUR_WEBHOOK_URL"
-                                method="POST" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
-                                <input type="hidden" name="resource" value="50_Prompts_Business_EN">
-                                <input type="text" name="first_name" placeholder="Your first name" required
-                                    class="form-input" style="margin-bottom: 0.5rem;">
-                                <input type="email" name="email" placeholder="Your email address" required
-                                    class="form-input" style="margin-bottom: 0.5rem;">
-                                <button type="submit" class="btn btn-primary w-100">Get the document</button>
-                                <p class="form-disclaimer">Zero spam, I promise. You can unsubscribe at any time.</p>
-                            </form>
+                            <!-- Formulaire désactivé : l'ancien pointait vers un webhook Make factice. À remplacer par un formulaire Brevo EN quand la fiche anglaise existe. -->
+                            <div class="sib-form" style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+                                <div class="sib-form-container" style="padding: 0;">
+                                    <div class="sib-container--large sib-container--vertical" style="padding: 0;">
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="text" placeholder="Your first name" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-input sib-form-block" style="margin-bottom: 0.5rem;">
+                                            <input class="input form-input" type="email" placeholder="Your email address" disabled style="opacity: 0.5; cursor: not-allowed; margin-bottom: 0.5rem;" />
+                                        </div>
+                                        <div class="sib-form-block" style="text-align: left; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                                            <button class="btn btn-primary w-100" type="button" disabled style="opacity: 0.8; cursor: not-allowed; background-color: #64748b; border-color: #64748b;">
+                                              <span class="sib-form-block__button-text">Coming Soon</span>
+                                            </button>
+                                        </div>
+                                        <p class="form-disclaimer" style="margin-top: 0.5rem;">Zero spam, I promise. You can unsubscribe at any time.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
